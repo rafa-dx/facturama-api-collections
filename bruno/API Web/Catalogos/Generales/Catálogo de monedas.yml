@@ -1,17 +1,18 @@
 info:
-  name: CartaPorte-ClaveUnidadPeso
+  name: Catálogo de monedas
   type: http
-  seq: 19
+  seq: 6
 
 http:
   method: GET
-  url: "{{SERVER}}/api/catalogs/cartaporte/ClaveUnidadPeso"
+  url: "{{SERVER}}/catalogs/currencies?keyword=mexicano"
   headers:
     - name: User-Agent
       value: "{{UserName}}"
-  body:
-    type: json
-    data: ""
+  params:
+    - name: keyword
+      value: mexicano
+      type: query
   auth:
     type: basic
     username: "{{UserName}}"

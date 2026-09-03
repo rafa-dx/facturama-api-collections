@@ -1,11 +1,11 @@
 info:
-  name: Catálogo de régimenes fiscales
+  name: Catálogo de tipos de Cfdi
   type: http
-  seq: 16
+  seq: 5
 
 http:
   method: GET
-  url: "{{SERVER}}/Catalogs/FiscalRegimens"
+  url: "{{SERVER}}/Catalogs/CfdiTypes"
   headers:
     - name: User-Agent
       value: "{{UserName}}"
@@ -20,3 +20,5 @@ settings:
   followRedirects: true
   maxRedirects: 5
   forwardAuthorizationHeader: false
+
+docs: Muestra los tipos de factura que se pueden crear con la cuenta actual

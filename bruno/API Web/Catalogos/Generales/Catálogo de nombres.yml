@@ -1,18 +1,14 @@
 info:
-  name: Catálogo de monedas
+  name: Catálogo de nombres
   type: http
-  seq: 12
+  seq: 2
 
 http:
   method: GET
-  url: "{{SERVER}}/catalogs/currencies?keyword=mexicano"
+  url: "{{SERVER}}/catalogs/NameIds"
   headers:
     - name: User-Agent
       value: "{{UserName}}"
-  params:
-    - name: keyword
-      value: mexicano
-      type: query
   auth:
     type: basic
     username: "{{UserName}}"
@@ -24,3 +20,5 @@ settings:
   followRedirects: true
   maxRedirects: 5
   forwardAuthorizationHeader: false
+
+docs: Catalogo de los nombres que pueden establecer en el PDF

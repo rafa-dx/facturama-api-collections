@@ -1,18 +1,17 @@
 info:
-  name: Códigos de productos o servicios
+  name: CartaPorte-ConfigAutotransporte
   type: http
-  seq: 10
+  seq: 6
 
 http:
   method: GET
-  url: "{{SERVER}}/catalogs/ProductsOrServices?keyword=desarrollo"
+  url: "{{SERVER}}/api/catalogs/cartaporte/ConfigAutotransporte"
   headers:
     - name: User-Agent
       value: "{{UserName}}"
-  params:
-    - name: keyword
-      value: desarrollo
-      type: query
+  body:
+    type: json
+    data: ""
   auth:
     type: basic
     username: "{{UserName}}"
@@ -24,5 +23,3 @@ settings:
   followRedirects: true
   maxRedirects: 5
   forwardAuthorizationHeader: false
-
-docs: Obtener los códigos de productos y servicios

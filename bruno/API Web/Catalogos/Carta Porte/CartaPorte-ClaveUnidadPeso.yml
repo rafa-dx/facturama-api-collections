@@ -1,14 +1,17 @@
 info:
-  name: Códigos RelationTypes
+  name: CartaPorte-ClaveUnidadPeso
   type: http
-  seq: 2
+  seq: 1
 
 http:
   method: GET
-  url: "{{SERVER}}/catalogs/RelationTypes"
+  url: "{{SERVER}}/api/catalogs/cartaporte/ClaveUnidadPeso"
   headers:
     - name: User-Agent
       value: "{{UserName}}"
+  body:
+    type: json
+    data: ""
   auth:
     type: basic
     username: "{{UserName}}"
@@ -20,5 +23,3 @@ settings:
   followRedirects: true
   maxRedirects: 5
   forwardAuthorizationHeader: false
-
-docs: Obtener  los códigos postales

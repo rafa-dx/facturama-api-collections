@@ -1,11 +1,11 @@
 info:
-  name: Catálogo de Usos de Cfdi
+  name: Tipo de incapacidad
   type: http
-  seq: 8
+  seq: 9
 
 http:
   method: GET
-  url: "{{SERVER}}/catalogs/CfdiUses"
+  url: "{{SERVER}}/catalogs/incapacities"
   headers:
     - name: User-Agent
       value: "{{UserName}}"
@@ -21,4 +21,4 @@ settings:
   maxRedirects: 5
   forwardAuthorizationHeader: false
 
-docs: Usos de que se le puede dar a la factura
+docs: Obtener  los códigos postales

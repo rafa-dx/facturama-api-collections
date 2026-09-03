@@ -1,14 +1,18 @@
 info:
-  name: Catálogo de formas de pago
+  name: Códigos de productos o servicios
   type: http
-  seq: 14
+  seq: 6
 
 http:
   method: GET
-  url: "{{SERVER}}/catalogs/PaymentForms"
+  url: "{{SERVER}}/catalogs/ProductsOrServices?keyword=desarrollo"
   headers:
     - name: User-Agent
       value: "{{UserName}}"
+  params:
+    - name: keyword
+      value: desarrollo
+      type: query
   auth:
     type: basic
     username: "{{UserName}}"
@@ -20,3 +24,5 @@ settings:
   followRedirects: true
   maxRedirects: 5
   forwardAuthorizationHeader: false
+
+docs: Obtener los códigos de productos y servicios

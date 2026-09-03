@@ -1,11 +1,11 @@
 info:
-  name: Catálogo de métodos de pago
+  name: Riesgo de puesto
   type: http
-  seq: 15
+  seq: 5
 
 http:
   method: GET
-  url: "{{SERVER}}/catalogs/PaymentMethods"
+  url: "{{SERVER}}/catalogs/positionrisks"
   headers:
     - name: User-Agent
       value: "{{UserName}}"
@@ -20,3 +20,5 @@ settings:
   followRedirects: true
   maxRedirects: 5
   forwardAuthorizationHeader: false
+
+docs: Obtener  los códigos postales

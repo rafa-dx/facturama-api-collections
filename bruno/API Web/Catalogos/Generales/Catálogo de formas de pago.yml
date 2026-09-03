@@ -1,17 +1,14 @@
 info:
-  name: CartaPorte-MaterialPeligroso
+  name: Catálogo de formas de pago
   type: http
-  seq: 21
+  seq: 6
 
 http:
   method: GET
-  url: "{{SERVER}}/api/catalogs/cartaporte/TipoEmbalaje"
+  url: "{{SERVER}}/catalogs/PaymentForms"
   headers:
     - name: User-Agent
       value: "{{UserName}}"
-  body:
-    type: json
-    data: ""
   auth:
     type: basic
     username: "{{UserName}}"

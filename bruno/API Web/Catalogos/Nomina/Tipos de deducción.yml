@@ -1,11 +1,11 @@
 info:
-  name: Catálogo de país
+  name: Tipos de deducción
   type: http
-  seq: 3
+  seq: 7
 
 http:
   method: GET
-  url: "{{SERVER}}/catalogs/Countries"
+  url: "{{SERVER}}/catalogs/deductions"
   headers:
     - name: User-Agent
       value: "{{UserName}}"
@@ -21,4 +21,4 @@ settings:
   maxRedirects: 5
   forwardAuthorizationHeader: false
 
-docs: Listado de paises válidos
+docs: Obtener  los códigos postales

@@ -1,18 +1,17 @@
 info:
-  name: Códigos postales
+  name: CartaPorte-DocumentoAduanero
   type: http
-  seq: 1
+  seq: 7
 
 http:
   method: GET
-  url: "{{SERVER}}/catalogs/PostalCodes?keyword=20001"
+  url: "{{SERVER}}/api/catalogs/cartaporte/DocumentoAduanero"
   headers:
     - name: User-Agent
       value: "{{UserName}}"
-  params:
-    - name: keyword
-      value: "20001"
-      type: query
+  body:
+    type: json
+    data: ""
   auth:
     type: basic
     username: "{{UserName}}"
@@ -24,5 +23,3 @@ settings:
   followRedirects: true
   maxRedirects: 5
   forwardAuthorizationHeader: false
-
-docs: Obtener  los códigos postales
